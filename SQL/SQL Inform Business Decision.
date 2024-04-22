@@ -1,3 +1,7 @@
+ Business Question: As a method of increasing future sales, the company has decided to give employee bonuses for exemplary performance in sales. Bonuses will be awarded to those employees who are responsible for the fire highest order amounts. How can we identify those employees?
+
+
+
 Step #1: Examine data set to find what tables are necessary to find employees who helped place the five highest orders. Using the following code:
   Select * from employees;
 
