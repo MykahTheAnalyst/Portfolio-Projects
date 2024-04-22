@@ -3,7 +3,7 @@
 
 
 Step #1: Examine data set to find what tables are necessary to find employees who helped place the five highest orders. Using the following code:
-  Select * from employees;
+Select * from employees;
 
 Step #2 To further figure out what information is needed to answer business question, I examined the orders tables using:
   Select * from orders
