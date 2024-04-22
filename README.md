@@ -1,4 +1,4 @@
-Welcome to my Data Analyst Portfolio!
+Good day, my name is Mykah and welcome to my Data Analyst Portfolio!
 
 I am a data analyst with experience in using various tools and technologies to collect, organize, and analyze data to inform business decisions. I am proficient in  SQL, Excel, Power BI, and Tableau.
 
