@@ -1,0 +1,52 @@
+Step #1: Examine data set to find what tables are necessary to find employees who helped place the five highest orders. Using the following code:
+  Select * from employees;
+
+Step #2 To further figure out what information is needed to answer business question, I examined the orders tables using:
+  Select * from orders
+
+Within that table we were presented results that contain columns ORDERID and EmployeeID both crucial for finding what employee took the highest order.
+The sales amount was not found in order table. Using formulates sale amount per item = quantify multiples by unit price We then needed to confirm if multiple orders can be under one(singular) order ID using.
+
+  Select * from order details order by order ID
+
+Obtain the price of each product.
+
+  Select * from products. 
+
+Retrieve data needed to solve business question by joining multiple tables in SQL:
+
+Select last name, first name, order if from employees
+inner join orders
+        on employees.employeeID = orders.employeeid 
+    inner join orderDetails
+        on orders.orderid = orderdetails.orderid
+    inner join products
+        on orderdetails.productid = products.productid
+Order by last name, first name 
+
+Write SQL code and calculate aggregate total:
+
+SELECT LastName, FirstName, Orders.OrderID, sum(Quantity * Price) as SalesAmt
+FROM employees
+    inner join orders
+        on employees.employeeID = orders.employeeid 
+    inner join orderDetails
+        on orders.orderid = orderdetails.orderid
+    inner join products
+        on orderdetails.productid = products.productid
+
+Display data in a format that can be used to infer a business decision.
+
+SELECT LastName, FirstName, Orders.OrderID, sum(Quantity * Price) as SalesAmt
+FROM employees
+    inner join orders
+        on employees.employeeID = orders.employeeid 
+    inner join orderDetails
+        on orders.orderid = orderdetails.orderid
+    inner join products
+        on orderdetails.productid = products.productid
+group by orders.orderid
+having orders.orderid in (10372, 10424, 10417, 10324, 10351)
+order by salesamt desc
+
+
