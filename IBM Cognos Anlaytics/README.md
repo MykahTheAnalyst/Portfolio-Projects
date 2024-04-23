@@ -1,4 +1,4 @@
-
+For the Salesboard, I captured the following metrics:
 Capture the following KPI metrics as visualizations:
 1. On the Sales dashboard, capture the following KPI metrics: 
     * In the first small rectangle (Panel 1), capture Profit (formatted to 1 decimal place in millions of US dollars)
